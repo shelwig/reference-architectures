@@ -19,6 +19,7 @@ export SQLSERVERDB=yousqlSqlServerDb
 export SQLADMINUSER=yoursqlAdminUser
 export DNSNAME=uniquednsnameOfGateway
 export STORAGEACCNAME=yourstorageaccountName
+export SUBSCRIPTIONID=yoursubscriptionid
 ```
 
 #### Step 2 Check if the dns name of gateway is available and is valid
@@ -28,7 +29,7 @@ Enter the bellow commands. If the Dns name is not valid or not available go back
 ```
 token=`az account get-access-token | jq -r .accessToken`
 
-curl -H "Authorization: Bearer ${token}" "https://management.azure.com/subscriptions/d0d422cd-e446-42aa-a2e2-e88806508d3b/providers/Microsoft.Network/locations/${RGLOCATION}/CheckDnsNameAvailability?domainNameLabel=${DNSNAME}&api-version=2018-11-01"
+curl -H "Authorization: Bearer ${token}" curl -H "Authorization: Bearer ${token}" "https://management.azure.com/subscriptions/${SUBSCRIPTIONID}/providers/Microsoft.Network/locations/${RGLOCATION}/CheckDnsNameAvailability?domainNameLabel=${DNSNAME}&api-version=2018-11-01"
 ```
 
 #### Step 3 Check if storage account name is valid and is available

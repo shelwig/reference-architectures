@@ -64,7 +64,7 @@ wget ${DEPLOYMENT}rundeployment.sh
 chmod +x rundeployment.sh
 ```
 ```
-.\rundeployment.sh
+./rundeployment.sh
 ```
 
 #### Step 6 Insert Document in Cosmos Db
